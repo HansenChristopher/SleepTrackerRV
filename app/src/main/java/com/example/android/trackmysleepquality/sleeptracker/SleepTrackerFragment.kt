@@ -61,6 +61,9 @@ class SleepTrackerFragment : Fragment() {
 
         binding.sleepTrackerViewModel = sleepTrackerViewModel
 
+        val adapter = SleepNightAdapter()
+        binding.sleepList.adapter = adapter
+
         binding.setLifecycleOwner(this)
 
         // Add an Observer on the state variable for showing a Snackbar message

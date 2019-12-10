@@ -27,6 +27,10 @@ import kotlinx.android.synthetic.main.header.view.*
 
 class SleepNightAdapter : RecyclerView.Adapter<TextItemViewHolder>() {
     var data = listOf<SleepNight>()
+        set(value) {
+            field = value
+            notifyDataSetChanged()
+        }
 
     override fun getItemCount() = data.size
 
